@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .message-list {
+            list-style: none;
+            padding: 0;
+        }
+        .message {
+            border: 1px solid #333;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #111;
+        }
+        .sender {
+            font-weight: bold;
+            color: #1e90ff;
+            cursor: pointer;
+        }
+        .sender-header {
+            margin-bottom: 5px;
+        }
+        .content {
+            display: none;
+            margin-top: 5px;
+        }
+        .content.show {
+            display: block;
+        }
+        input[type="password"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #1e90ff;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1a7bc9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button id="passwordSubmit" onclick="checkPassword()">Submit</button>
+        <div id="content">
+            <h1>SMS Messages</h1>
+            <ul class="message-list"><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender0')">
+        <span class="sender">+212631183310</span>
+    </div>
+    <div id="sender0" class="content">
+        Appel en absence: Cette personne/Ce numéro vous a appelé le 27/10/2024 à 19:17, sans laisser de message.<br>Appel en absence: Cette personne/Ce numéro vous a appelé le 27/10/2024 à 19:17, sans laisser de message.
+    </div>
+</li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender1')">
+                        <span class="sender">IAM</span>
+                    </div>
+                    <div id="sender1" class="content">
+                        IAM vous envoie gratuitement des SMS de configuration. Si un code de securite est demande, tapez 0000.<br>IAM vous envoie gratuitement des SMS de configuration. Si un code de securite est demande, tapez 0000.<br>Vous avez activé avec succès le Pass Internet *3 5 DH, bénéficiez de 500 Mo valables jusqu'au 29-11-2024 à 18:37.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>IAM vous envoie gratuitement des SMS de configuration. Si un code de securite est demande, tapez 0000.<br>Désolé, votre solde est insuffisant pour l'opération demandée. Nous vous invitons à recharger votre compte.<br>اكتشفوا العرض الجديد و الحصري 5 دراهم لجواز نجمة 2 !
+50 دقيقة صالحة لمدة 4 أيام عوض 25 دقيقة + 25Mo صالحة لمدة 3 أيام. رمز التعبئة 2*.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Nous ne pouvons pas accéder actuellement à votre demande. Veuillez réessayer ultérieurement. Merci.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Les bonnes affaires Smartphones chez Maroc Telecom avec livraison gratuite ! Le Xiaomi Redmi A3x 64Go à 990 DH TTC, le Samsung Galaxy A06 64Go à 1249 DH TTC et le Honor X7a 128Go à 1399 DH TTC. Commandez dès maintenant https://offres.iam.ma/smartphones<br>اكتشفوا العرض الجديد و الحصري 5 دراهم لجواز نجمة 2 !
+50 دقيقة صالحة لمدة 4 أيام عوض 25 دقيقة + 25Mo صالحة لمدة 3 أيام. رمز التعبئة 2*.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Vous avez activé avec succès le Pass Internet *3 20 DH, bénéficiez de 2 Go valables jusqu'au 26-12-2024 à 11:27.<br>Le crédit de votre Pass Internet *3 restant est de 1021 Mo, à consommer jusqu'au 26/12/2024 à 11:27. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Désolé, votre solde est insuffisant pour l'opération demandée. Nous vous invitons à recharger votre compte.<br>Vous avez activé avec succès le Pass Internet *3 10 DH, bénéficiez de 1 Go valables jusqu'au 31-12-2024 à 20:30.<br>Désolé, cette carte de recharge a déjà été utilisée, veuillez essayer avec une nouvelle carte de recharge ou contactez votre Centre de Relation Clientèle.<br>Vous avez activé avec succès le Pass Internet *3 10 DH, bénéficiez de 1 Go valables jusqu'au 31-12-2024 à 20:32.<br>Le crédit de votre Pass Internet *3 restant est de 1020 Mo, à consommer jusqu'au 31/12/2024 à 20:32. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>اتصالات المغرب تتمنى لكم سنة سعيدة 2025 
+https://offres.iam.ma/voeux2025<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Vous avez activé avec succès le Pass National et Internet *2 5 DH, bénéficiez de 25 min et 25 Mo d'Internet valables 3 jours.<br>IAM vous envoie gratuitement des SMS de configuration. Si un code de securite est demande, tapez 0000.<br>Maroc Telecom vous souhaite la bienvenue et vous offre 20 DH de communications vers toutes les destinations nationales et internationales, valables jusqu'au 08/07/2025.<br>اتصالات المغرب تتمنى لكم سنة أمازيغية سعيدة 2975<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Vous avez activé avec succès le Pass National et Internet *2 5 DH, bénéficiez de 25 min et 25 Mo d'Internet valables 3 jours.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Vous avez activé avec succès le Pass Internet *3 5 DH, bénéficiez de 500 Mo valables jusqu'au 13-02-2025 à 20:19.<br>IAM vous envoie gratuitement des SMS de configuration. Si un code de securite est demande, tapez 0000.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Vous avez activé avec succès le Pass Internet *3 5 DH, bénéficiez de 500 Mo valables jusqu'au 19-02-2025 à 16:56.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>Vous avez activé avec succès le Pass Internet *3 10 DH, bénéficiez de 1 Go valables jusqu'au 25-02-2025 à 20:49.<br>Le crédit de votre Pass Internet *3 restant est de 1015 Mo, à consommer jusqu'au 25/02/2025 à 20:49. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Vous avez activé avec succès le Pass Internet *3 10 DH, bénéficiez de 1 Go valables jusqu'au 02-03-2025 à 07:55.<br>Vous avez activé avec succès le Pass National et Internet *2 5 DH, bénéficiez de 25 min et 25 Mo d'Internet valables 3 jours.<br>Le crédit de votre Pass Internet *3 restant est de 1022 Mo, à consommer jusqu'au 02/03/2025 à 07:55. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>Il vous reste moins de 10 min valables jusqu'au 02/03/2025 à 07:57. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *2.<br>Vous avez activé avec succès le Pass Internet *3 10 DH, bénéficiez de 1 Go valables jusqu'au 02-03-2025 à 16:37.<br>Le crédit de votre Pass Internet *3 restant est de 1023 Mo, à consommer jusqu'au 02/03/2025 à 16:37. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>اتصالات المغرب تتمنى لكم رمضان كريم
+https://offres.iam.ma/voeux_ramadan2025<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>اتصالات المغرب تتمنى لكم رمضان كريم
+https://offres.iam.ma/voeux_ramadan2025<br>Vous avez activé avec succès le Pass National et Internet *2 5 DH, bénéficiez de 25 min et 25 Mo d'Internet valables 3 jours.<br>Vous avez activé avec succès le Pass Internet *3 5 DH, bénéficiez de 500 Mo valables jusqu'au 05-03-2025 à 16:29.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Vous avez activé avec succès le Pass Internet *3 10 DH, bénéficiez de 1 Go valables jusqu'au 21-03-2025 à 16:58.<br>Le crédit de votre Pass Internet *3 restant est de 1015 Mo, à consommer jusqu'au 21/03/2025 à 16:58. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>بمناسبة عيد الفطر المبارك، تتمنى لكم اتصالات المغرب عيداً سعيداً وكل عام وأنتم بخير
+https://offres.iam.ma/voeuxaid_2025<br>بمناسبة عيد الفطر المبارك، تتمنى لكم اتصالات المغرب عيداً سعيداً وكل عام وأنتم بخير
+https://offres.iam.ma/voeuxaid_2025<br>Désolé, cette carte de recharge a déjà été utilisée, veuillez essayer avec une nouvelle carte de recharge ou contactez votre Centre de Relation Clientèle.<br>Désolé, cette carte de recharge a déjà été utilisée, veuillez essayer avec une nouvelle carte de recharge ou contactez votre Centre de Relation Clientèle.<br>Vous avez activé avec succès le Pass National et Internet *2 10 DH, bénéficiez de 50 min et 60 Mo d'Internet valables 7 jours.<br>Désolé, cette carte de recharge a déjà été utilisée, veuillez essayer avec une nouvelle carte de recharge ou contactez votre Centre de Relation Clientèle.<br>Echec de la recharge. Le compte rechargé est suspendu. Merci de contacter le Customer Care.<br>Vous avez activé avec succès le Pass Internet *3 10 DH, bénéficiez de 1 Go valables jusqu'au 08-04-2025 à 21:42.<br>Le crédit de votre Pass Internet *3 restant est de 1023 Mo, à consommer jusqu'au 08/04/2025 à 21:42. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>Vous avez activé avec succès le Pass Internet *3 10 DH, bénéficiez de 1 Go valables jusqu'au 13-04-2025 à 15:39.<br>Le crédit de votre Pass Internet *3 restant est de 1023 Mo, à consommer jusqu'au 13/04/2025 à 15:39. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>كونوا في الموعد يوم 15 ابريل ! اللامحدود نحو تطبيقات المواقع الاجتماعية نجمة 6 بجودة عالية مع اتصالات المغرب<br>عرض جديد و استثنائي من اتصالات المغرب !
+أنترنيت لامحدود نحو أشهر مواقع التواصل الاجتماعي : واتساب، فيسبوك، انستغرام، سنابشات وإكس مع جواز النجمة 6 بـ50 درهم، صالح لمدة شهر !
+سارع وفعّل العرض الآن ! رمز التعبئة 6*<br>عرض جديد و استثنائي من اتصالات المغرب !
+أنترنيت لامحدود نحو أشهر مواقع التواصل الاجتماعي : واتساب، فيسبوك، انستغرام، سنابشات وإكس مع جواز النجمة 6 بـ50 درهم، صالح لمدة شهر !
+سارع وفعّل العرض الآن ! رمز التعبئة 6*<br>Vous avez activé avec succès le Pass National et Internet *2 10 DH, bénéficiez de 50 min et 60 Mo d'Internet valables 7 jours.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.<br>الى غاية 30 أبريل، سارعوا بشراء iPhone مجدد ابتداءً من 2879 درهم فقط و استفيدوا من 15Go مجانًا صالحة لمدة شهر. عرض متوفر في وكالاتنا التجارية أو عبر متجرنا الإلكتروني مع توصيل مجاني https://offres.iam.ma/smartphones<br>Désolé, cette carte de recharge a déjà été utilisée, veuillez essayer avec une nouvelle carte de recharge ou contactez votre Centre de Relation Clientèle.<br>Vous avez activé avec succès le Pass Internet *3 20 DH, bénéficiez de 2 Go valables jusqu'au 05-05-2025 à 17:35.<br>Désolé, cette carte de recharge a déjà été utilisée, veuillez essayer avec une nouvelle carte de recharge ou contactez votre Centre de Relation Clientèle.<br>Le crédit de votre Pass Internet *3 restant est de 1021 Mo, à consommer jusqu'au 05/05/2025 à 17:35. Rechargez votre compte dès maintenant en appelant le 555. Saisir le code de la recharge suivi de *3.<br>Le crédit de votre Pass Internet *3 restant est de 722 Mo, à consommer jusqu'au 05/05/2025 à 17:35. Pensez à recharger votre compte internet, code recharge *3.<br>Le crédit de votre Pass Internet *3 a expiré. Afin de continuer à naviguer, veuillez appeler le 555 et saisir le code de la recharge choisie suivi de *3.<br>لتفادي توقيف رقم هاتفكم جوال، تدعوكم اتصالات المغرب إلى تسجيل معلوماتكم الخاصة عبر التطبيق https://offres.iam.ma/identification أو في أي وكالة تجارية. تمكنكم هذه العملية من الاستفادة مجانا وفي اليوم الموالي من 15 دقيقة من المكالمات و 1 جيكا من الأنترنيت.
+                    </div>
+                </li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender2')">
+                        <span class="sender">WhatsApp</span>
+                    </div>
+                    <div id="sender2" class="content">
+                        <#> Your WhatsApp code: 290-160
+
+You can also tap on this link to verify your phone: v.whatsapp.com/290160
+
+Don't share this code with others
+4sgLq1p5sV6<br><#> Your WhatsApp code: 492-740
+
+You can also tap on this link to verify your phone: v.whatsapp.com/492740
+
+Don't share this code with others
+4sgLq1p5sV6<br><#> Your   code 594-838
+ 
+Don't share this code with others
+rJbA/XP1K+V<br><#> Your WhatsApp Business code 793-675
+You can also tap this link to verify your phone: b.whatsapp.com/793675
+Don't share this code with others
+rJbA/XP1K+V<br><#> Your  code: 834-745
+ 
+Don't share this code with others
+4sgLq1p5sV6<br><#> Your  code: 533-226
+ 
+Don't share this code with others
+4sgLq1p5sV6<br><#> Your  code: 533-226
+ 
+Don't share this code with others
+4sgLq1p5sV6<br>Your WhatsApp code: 608-904
+You can also tap on this link to verify your phone: v.whatsapp.com/608904
+Don't share this code with others<br><#> Your WhatsApp Business code 432-061
+You can also tap this link to verify your phone: b.whatsapp.com/432061
+Don't share this code with others
+rJbA/XP1K+V<br><#> Your WhatsApp Business code 569-975
+Don't share this code with others
+rJbA/XP1K+V
+                    </div>
+                </li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender3')">
+        <span class="sender">Google</span>
+    </div>
+    <div id="sender3" class="content">
+        G-470134 is your Google verification code. Don't share your code with anyone.<br>G-248113 is your Google verification code. Don't share your code with anyone.
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender4')">
+        <span class="sender">Fidelio</span>
+    </div>
+    <div id="sender4" class="content">
+        اتصالات المغرب تشكركم على وفائكم، و تهديكم اليوم 60Mo من عرض الشبكات الإجتماعية. للإستفادة، ابعثوا مجانا "Jawal" إلى الرقم 6766.<br>اتصالات المغرب تشكرك على وفائك، و تهديك اليوم 80Mo من رصيد الإنترنت. للإستفادة، ابعث مجانا "Jawal" إلى الرقم 6766.<br>اتصالات المغرب تشكرك على وفائك، و تهديك اليوم 8 دقائق من المكالمات الوطنية. للإستفادة، ابعث مجانا "Jawal" إلى الرقم 6766.
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender5')">
+        <span class="sender">CodesCIH</span>
+    </div>
+    <div id="sender5" class="content">
+        <#> 566706 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 550580 Pass code de confirmation pour installer CIHMobile sur un nouvel appareil. Si ce nest pas vous contactez le 4747. 3/+p50SXgHN<br><#> 302613 Pass code de confirmation pour installer CIHMobile sur un nouvel appareil. Si ce nest pas vous contactez le 4747. 3/+p50SXgHN<br><#> 586324 Pass code de confirmation pour installer CIHMobile sur un nouvel appareil. Si ce nest pas vous contactez le 4747. 3/+p50SXgHN<br><#> 461308 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 368241 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 808388 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 045604 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 642706 est le code de confirmation confidentiel pour finaliser la transaction. Code valide 1mn. A ne communiquer a personne. 3/+p50SXgHN<br><#> 231073 Pass code de confirmation pour installer CIHMobile sur un nouvel appareil. Si ce nest pas vous contactez le 4747. 3/+p50SXgHN<br><#> 617002 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 257211 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 863381 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 651372 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 238334 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN<br><#> 762345 code de confirmation pour ajout de beneficiaire, ne communiquez a personne. Si vous n en etes pas l initiateur, contactez le 4747. 3/+p50SXgHN
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender6')">
+        <span class="sender">PAYPAL</span>
+    </div>
+    <div id="sender6" class="content">
+        PayPal: 181541 is your security code. Don't share your code.<br>PayPal: 785540 is your security code. Don't share your code.<br>PayPal: 705281 is your password recovery code. Don't share your code.<br>PayPal: 287212 is your security code. Don't share your code.<br>PayPal: 372860 is your password recovery code. Don't share your code.<br>PayPal: 961025 is your password recovery code. Don't share your code.<br>PayPal: 208521 is your password recovery code. Don't share your code.<br>PayPal: 949165 is your password recovery code. Don't share your code.<br>PayPal: 145756 is your password recovery code. Don't share your code.
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender7')">
+        <span class="sender">+212659717368</span>
+    </div>
+    <div id="sender7" class="content">
+        Hi, 171362 is your pin
+    </div>
+</li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender8')">
+                        <span class="sender">Promo Jawal</span>
+                    </div>
+                    <div id="sender8" class="content">
+                        إلى غاية 6 دجنبر، استفيدوا من التعبئة المضاعفة x22 ابتداء من 30 درهم و من التعبئة المضاعفة x13 على المكالمات و الانترنيت من 5 الى 25 درهم : 10 دراهم = 130 درهم + 130Mo<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا عرض 10 دراهم المميز لجواز نجمة 2! 
+10 دراهم صالحة لمدة 7 أيام تهديكم 50 دقائق من المكالمات الوطنية. رمز التعبئة 2*.<br>إلى غاية 22 دجنبر، استفيدوا من التعبئة المضاعفة x22 ابتداء من 30 درهم و من التعبئة المضاعفة x13 على المكالمات و الانترنيت من 5 الى 25 درهم : 10 دراهم = 130 درهم + 130Mo<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>استفيدوا من العرض الجديد اللامحدود *22 ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 31 دجنبر.<br>استفيدوا من العرض الجديد اللامحدود *22 ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 31 دجنبر.<br>إلى غاية 05 يناير، استفيدوا من التعبئة المضاعفة x22 ابتداء من 30 درهم و من التعبئة المضاعفة x13 على المكالمات و الانترنيت من 5 الى 25 درهم : 10 دراهم = 130 درهم + 130Mo<br>اكتشفوا عرض 10 دراهم المميز لجواز نجمة 2! 
+10 دراهم صالحة لمدة 7 أيام تهديكم 50 دقائق من المكالمات الوطنية. رمز التعبئة 2*.<br>إلى غاية 12 يناير، مع Discord، تيك توك، يوتيوب، فايسبوك، واتساب، انستغرام، سنابشات، مسنجر و تويتر، استفيدوا من العرض الإستثنائي *6 لاتصالات المغرب :
+5 دراهم = 500Mo (7 أيام) !
+10 دراهم = 1Go (15 يوماً) !
+20 درهماً = 2Go (30 يوماً) !
+https://bit.ly/34yFLAU<br>إلى غاية 12 يناير، استفيدوا من التعبئة المضاعفة x22 ابتداء من 30 درهم و من التعبئة المضاعفة x13 على المكالمات و الانترنيت من 5 الى 25 درهم : 10 دراهم = 130 درهم + 130Mo<br>اكتشفوا عروض جوال للمكالمات ب 5 دراهم فقط : 
+جواز النجمة 22 يوفر لكم 50 دقيقة صالحة لمدة يومين. رمز التعبئة 22*
+جواز النجمة 5 يوفر لكم 27 دقيقة صالحة لمدة 7 أيام. رمز التعبئة 5*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا عرض 10 دراهم المميز لجواز نجمة 2! 
+10 دراهم صالحة لمدة 7 أيام تهديكم 50 دقائق من المكالمات الوطنية. رمز التعبئة 2*.<br>استفيدوا من العرض الجديد اللامحدود *22 ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 31 يناير 2025.<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا عرض 10 دراهم المميز لجواز نجمة 2! 
+10 دراهم صالحة لمدة 7 أيام تهديكم 50 دقائق من المكالمات الوطنية. رمز التعبئة 2*.<br>إلى غاية 26 يناير، استفيدوا من التعبئة المضاعفة x22 ابتداء من 30 درهم و من التعبئة المضاعفة x13 على المكالمات و الانترنيت من 5 الى 25 درهم : 10 دراهم = 130 درهم + 130Mo<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا عرض 10 دراهم المميز لجواز نجمة 2! 
+10 دراهم صالحة لمدة 7 أيام تهديكم 50 دقائق من المكالمات الوطنية. رمز التعبئة 2*.<br>استفيدوا من العرض الجديد اللامحدود *22 ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 31 يناير 2025.<br>استفيدوا من العرض الجديد اللامحدود *22 ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 31 يناير 2025.<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>إلى غاية 09 فبراير، مع Discord، تيك توك، يوتيوب، فايسبوك، واتساب، انستغرام، سنابشات، مسنجر و تويتر، استفيدوا من العرض الإستثنائي *6 لاتصالات المغرب :
+5 دراهم = 500Mo (7 أيام) !
+10 دراهم = 1Go (15 يوماً) !
+20 درهماً = 2Go (30 يوماً) !
+https://bit.ly/34yFLAU<br>إلى غاية 09 فبراير، مع Discord، تيك توك، يوتيوب، فايسبوك، واتساب، انستغرام، سنابشات، مسنجر و تويتر، استفيدوا من العرض الإستثنائي *6 لاتصالات المغرب :
+5 دراهم = 500Mo (7 أيام) !
+10 دراهم = 1Go (15 يوماً) !
+20 درهماً = 2Go (30 يوماً) !
+https://bit.ly/34yFLAU<br>استفيدوا من العرض الجديد اللامحدود *22 ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 09 فبراير.<br>استفيدوا من العرض الجديد اللامحدود *22 ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 09 فبراير.<br>اكتشفوا عروض جوال للمكالمات ب 5 دراهم فقط : 
+جواز النجمة 22 يوفر لكم 50 دقيقة صالحة لمدة يوم واحد. رمز التعبئة 22*
+جواز النجمة 5 يوفر لكم 27 دقيقة صالحة لمدة 7 أيام. رمز التعبئة 5*<br>اكتشفوا عروض جوال للمكالمات ب 5 دراهم فقط : 
+جواز النجمة 22 يوفر لكم 50 دقيقة صالحة لمدة يوم واحد. رمز التعبئة 22*
+جواز النجمة 5 يوفر لكم 27 دقيقة صالحة لمدة 7 أيام. رمز التعبئة 5*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا عرض 10 دراهم المميز لجواز نجمة 2! 
+10 دراهم صالحة لمدة 7 أيام تهديكم 50 دقائق من المكالمات الوطنية. رمز التعبئة 2*.<br>اكتشفوا عرض 10 دراهم المميز لجواز نجمة 2! 
+10 دراهم صالحة لمدة 7 أيام تهديكم 50 دقائق من المكالمات الوطنية. رمز التعبئة 2*.<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>استفيدوا من العرض الجديد اللامحدود 22* ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 31 مارس.<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>إلى غاية 20 مارس، استفيدوا من عرض نجمة 6 : واتساب، فايسبوك، تيك توك، انستغرام، سنابشات و يوتيوب.
+5 دراهم = 7 أيام (500Mo)
+10 دراهم = 15 يوماً (1Go)
+20 درهماً = 30 يوماً (2Go)<br>استفيدوا من العرض الجديد اللامحدود 22* ب 25 درهم فقط، صالح لمدة يوم واحد.
+يوفر لكم هذا العرض مكالمات وطنية لامحدودة نحو جميع الوجهات الوطنية. عرض صالح إلى غاية 31 مارس.<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>اكتشفوا العروض المميزة لجواز نجمة 3! 
+10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و 20 درهم توفر لكم 2Go  صالحة لمدة 7 أيام. رمز التعبئة 3*<br>بلا انتظار، بلا انقطاع... أنترنيت بجودة عالية مع اتصالات المغرب ! 
+عروض جواز النجمة 3 المميزة : 10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و30 درهم توفر لكم 4,5Go صالحة لمدة 14 يوم. رمز التعبئة 3*<br>بلا انتظار، بلا انقطاع... أنترنيت بجودة عالية مع اتصالات المغرب ! 
+عروض جواز النجمة 3 المميزة : 10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و30 درهم توفر لكم 4,5Go صالحة لمدة 14 يوم. رمز التعبئة 3*<br>بلا انتظار، بلا انقطاع... أنترنيت بجودة عالية مع اتصالات المغرب ! 
+عروض جواز النجمة 3 المميزة : 10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و30 درهم توفر لكم 4,5Go صالحة لمدة 14 يوم. رمز التعبئة 3*<br>بلا انتظار، بلا انقطاع... أنترنيت بجودة عالية مع اتصالات المغرب ! 
+عروض جواز النجمة 3 المميزة : 10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و30 درهم توفر لكم 4,5Go صالحة لمدة 14 يوم. رمز التعبئة 3*<br>بلا انتظار، بلا انقطاع... أنترنيت بجودة عالية مع اتصالات المغرب ! 
+عروض جواز النجمة 3 المميزة : 10 دراهم توفر لكم 1Go صالحة لمدة 3 أيام و30 درهم توفر لكم 4,5Go صالحة لمدة 14 يوم. رمز التعبئة 3*<br>عروض النجمة 22 تواصل بلا حدود !
+10 دراهم = ساعة و 45 دقيقة، صالحة 4 أيام
+25 درهم = مكالمات غير محدودة، صالحة ليوم واحد
+100 درهم = مكالمات غير محدودة، صالحة 7 أيام
+سارعوا ! العرض متاح إلى غاية 30 أبريل. رمز التعبئة 22*<br>عروض النجمة 22 تواصل بلا حدود !
+10 دراهم = ساعة و 45 دقيقة، صالحة 4 أيام
+25 درهم = مكالمات غير محدودة، صالحة ليوم واحد
+100 درهم = مكالمات غير محدودة، صالحة 7 أيام
+سارعوا ! العرض متاح إلى غاية 30 أبريل. رمز التعبئة 22*<br>عروض النجمة 22 تواصل بلا حدود !
+10 دراهم = ساعة و 45 دقيقة، صالحة 4 أيام
+25 درهم = مكالمات غير محدودة، صالحة ليوم واحد
+100 درهم = مكالمات غير محدودة، صالحة 7 أيام
+سارعوا ! العرض متاح إلى غاية 30 أبريل. رمز التعبئة 22*<br>إلى غاية 20 أبريل، استفيدوا من التعبئة المضاعفة x22 ابتداءا من 30 درهم و من التعبئة المضاعفة x13 على المكالمات والأنترنيت من 5 الى 25 درهم : 30 درهم = 660 درهم + 30Mo<br>إلى غاية 27 أبريل، استفيدوا من التعبئة المضاعفة x22 ابتداءا من 30 درهم و من التعبئة المضاعفة x13 على المكالمات والأنترنيت من 5 الى 25 درهم : 30 درهم = 660 درهم + 30Mo<br>إلى غاية 04 ماي، استفيدوا من التعبئة المضاعفة x22 ابتداءا من 30 درهم و من التعبئة المضاعفة x13 على المكالمات والأنترنيت من 5 الى 25 درهم : 30 درهم = 660 درهم + 30Mo<br>بلا انتظار، بلا انقطاع،.. أنترنيت بجودة عالية مع اتصالات المغرب !
+عروض جواز النجمة 3 المميزة  ! 
+10 دراهم توفر لكم  1Go صالحة لمدة 3 أيام و30 درهم توفر لكم 4,5Go صالحة لمدة 14 يوم. رمز التعبئة 3*<br>عروض النجمة 22 تواصل بلا حدود !
+10 دراهم = ساعة و 45 دقيقة، صالحة 4 أيام
+25 درهم = مكالمات غير محدودة، صالحة ليوم واحد
+100 درهم = مكالمات غير محدودة، صالحة 7 أيام
+سارعوا، العرض متاح إلى غاية 23 ماي. رمز التعبئة 22*<br>إلى غاية 11 ماي، استفيدوا من التعبئة المضاعفة x22 ابتداءا من 30 درهم و من التعبئة المضاعفة x13 على المكالمات والأنترنيت من 5 الى 25 درهم : 30 درهم = 660 درهم + 30Mo<br>بلا انتظار، بلا انقطاع،.. أنترنيت بجودة عالية مع اتصالات المغرب !
+عروض جواز النجمة 3 المميزة  ! 
+10 دراهم توفر لكم  1Go صالحة لمدة 3 أيام و30 درهم توفر لكم 4,5Go صالحة لمدة 14 يوم. رمز التعبئة 3*<br>إلى غاية 18 ماي، استفيدوا من التعبئة المضاعفة x22 ابتداءا من 30 درهم و من التعبئة المضاعفة x13 على المكالمات والأنترنيت من 5 الى 25 درهم : 30 درهم = 660 درهم + 30Mo<br>بلا انتظار، بلا انقطاع،.. أنترنيت بجودة عالية مع اتصالات المغرب !
+عروض جواز النجمة 3 المميزة  ! 
+10 دراهم توفر لكم  1Go صالحة لمدة 3 أيام و30 درهم توفر لكم 4,5Go صالحة لمدة 14 يوم. رمز التعبئة 3*<br>عروض النجمة 22 تواصل بلا حدود !
+10 دراهم = ساعة و 45 دقيقة، صالحة 4 أيام
+25 درهم = مكالمات غير محدودة، صالحة ليوم واحد
+100 درهم = مكالمات غير محدودة، صالحة 7 أيام
+سارعوا، العرض متاح إلى غاية 23 ماي. رمز التعبئة 22*
+                    </div>
+                </li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender9')">
+        <span class="sender">Proton</span>
+    </div>
+    <div id="sender9" class="content">
+        Your Proton verification code is: 938369
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender10')">
+        <span class="sender">+212650194917</span>
+    </div>
+    <div id="sender10" class="content">
+        :+{     650650jUqCgF 
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender11')">
+        <span class="sender">+212650190253</span>
+    </div>
+    <div id="sender11" class="content">
+        (;{     315415cyGQzC 
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender12')">
+        <span class="sender">Jawal</span>
+    </div>
+    <div id="sender12" class="content">
+        استفيدوا من عرض جوال  الشامل *5 ابتداء من 5 دراهم صالح للمكالمات، الأنترنيت والرسائل القصيرة لمدة 7 أيام. رمز التعبئة *5.<br>استفيدوا من عرض جوال الشامل *5 ابتداء من 5 دراهم صالح للمكالمات، الأنترنيت و الرسائل القصيرة لمدة 7 أيام. رمز التعبئة *5<br>مع جواز نجمة 5 الشامل، كل احتياجاتكم من المكالمات الوطنية والأنترنيت في تعبئة واحدة ابتداءا من 5 دراهم، صالحة لمدة 7 أيام. رمز التعبئة 5*<br>مع جواز نجمة 5 الشامل، كل احتياجاتكم من المكالمات الوطنية والأنترنيت في تعبئة واحدة ابتداءا من 5 دراهم، صالحة لمدة 7 أيام. رمز التعبئة 5*<br>مع جواز نجمة 5 الشامل، كل احتياجاتكم من المكالمات الوطنية والأنترنيت في تعبئة واحدة ابتداءا من 5 دراهم، صالحة لمدة 7 أيام. رمز التعبئة 5*<br>مع جواز نجمة 5 الشامل، كل احتياجاتكم من المكالمات الوطنية والأنترنيت في تعبئة واحدة ابتداءا من 5 دراهم، صالحة لمدة 7 أيام. رمز التعبئة 5*<br>مع جواز نجمة 5 الشامل، كل احتياجاتكم من المكالمات الوطنية والأنترنيت في تعبئة واحدة ابتداءا من 5 دراهم، صالحة لمدة 7 أيام. رمز التعبئة 5*<br>مع جواز نجمة 5 الشامل، كل احتياجاتكم من المكالمات الوطنية والأنترنيت في تعبئة واحدة ابتداءا من 5 دراهم، صالحة لمدة 7 أيام. رمز التعبئة 5*<br>مع جواز نجمة 5 الشامل، كل احتياجاتكم من المكالمات الوطنية والأنترنيت في تعبئة واحدة ابتداءا من 5 دراهم، صالحة لمدة 7 أيام. رمز التعبئة 5*
+    </div>
+</li>               <li class="message">
+                   <div class="sender-header" onclick="toggleMessages('sender13')">
+                       <span class="sender">MT Video</span>
+                   </div>
+                   <div id="sender13" class="content">
+                       مع اتصالات المغرب، اكتشفوا آخر الإنتاجات العربية و التركية :المدينة البعيدة، القدر، ليلى، العبقري، الحفرة، و غيرهم على خدمة Shahid Mobile ! للاشتراك،  زوروا الرابط https://shahid.mbc.net/maroctel
+28 درهما للشهر.
+                   </div>
+               </li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender14')">
+        <span class="sender">MT SMART</span>
+    </div>
+    <div id="sender14" class="content">
+        استفيدوا من خدمة أمن الأنترنت لاتصالات المغرب لحماية هواتفكم الذكية وبياناتكم الشخصية ابتداء من  15 درهما للشهر. للاشتراك، زوروا الرابط http://offres.iam.ma/Internet-Safe
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender15')">
+        <span class="sender">AUTHMSG</span>
+    </div>
+    <div id="sender15" class="content">
+        Your Claude verification code is: 153571<br>Your Codeium verification code is: 818264<br>Your Codeium verification code is: 137007<br>Your Paxful OTP verification code is: 943400
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender16')">
+        <span class="sender">CIHBANK</span>
+    </div>
+    <div id="sender16" class="content">
+        04279 est le code rouge  relatif a votre CIH express de 1800 valide jusqu'a 23-01-2025. Veuillez transmettre ce code au beneficiaire<br>05932 est le code vert de votre CIH express de 1000.00 valide jusqu'au 01-03-2025,sous la ref 00230080007521827022025.Retirable depuis Agence CIH,WePay,GAB<br>14040 est le code vert de votre CIH express de 1700.00 valide jusqu'au 01-03-2025,sous la ref 00230080007531927022025.Retirable depuis Agence CIH,WePay,GAB<br>39181 est le code vert de votre CIH express de 300 valide jusqu'au 09-04-2025,sous la ref 00230050007532307042025.Retirable depuis Agence CIH,WePay,GAB
+    </div>
+</li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender17')">
+                        <span class="sender">inDrive</span>
+                    </div>
+                    <div id="sender17" class="content">
+                        <#>Your inDrive verification code is: 6251
+cpjyScQ++Hg
+                    </div>
+                </li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender18')">
+        <span class="sender">+212603843321</span>
+    </div>
+    <div id="sender18" class="content">
+        Boite vocale IAM: Ce correspondant vous a appelé 1 fois sans laisser de message le 27-02-25 à 16:09.
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender19')">
+        <span class="sender">Qsms</span>
+    </div>
+    <div id="sender19" class="content">
+        Your verification code is 504506 (valid for 5 minutes). Do not share it with anyone. Bybit will not ask you for a verification code.
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender20')">
+        <span class="sender">MT Music</span>
+    </div>
+    <div id="sender20" class="content">
+        اكتشفوا سحر الموسيقى مع خدمة أنغامي لاتصالات المغرب! للاشتراك ، موعدكم على الرابط https://www.anghami.com/operators/Maroctel. إلى غاية 31 مارس، جوازكم الشهري الأول بالمجان، ثم 35 DH للشهر.
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender21')">
+        <span class="sender">ATTIJARI</span>
+    </div>
+    <div id="sender21" class="content">
+        Connectez-vous à l'application Attijari Mobile à partir du lien https://attijarimobile.page.link/AtKgJhovVuZT8TER6 pour finaliser votre souscription.
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender22')">
+        <span class="sender">BCP</span>
+    </div>
+    <div id="sender22" class="content">
+        <#> 52486179 est votre code de confirmation. 78N3mY+tR7+<br><#> 52681634 est votre code de confirmation. 78N3mY+tR7+
+    </div>
+</li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender23')">
+                        <span class="sender">MT Games</span>
+                    </div>
+                    <div id="sender23" class="content">
+                        مع اتصالات المغرب، عيشوا تجربة فريدة مع لعبة Free Fire واشتروا الجواهر بكل سهولة من خلال رصيدكم * 9 ! موعدكم على https://shop2game.com
+50  جوهرة ابتداءً من 7DH فقط !
+                    </div>
+                </li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender24')">
+                        <span class="sender">FACEBOOK</span>
+                    </div>
+                    <div id="sender24" class="content">
+                        Lien Instagram: https://ig.me/1U7X2Gu92RtIdrm. Ne le partagez pas.<br>Facebook: votre code est le 643653
+@m.facebook.com #643653
+                    </div>
+                </li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender25')">
+        <span class="sender">KFC</span>
+    </div>
+    <div id="sender25" class="content">
+        <#> Votre code est 5673. Il est valable pendant 10 minutes. Ne partagez ce code  avec personne. Lew4b/w5UpK
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender26')">
+        <span class="sender">+212663767229</span>
+    </div>
+    <div id="sender26" class="content">
+        1945<br>1
+    </div>
+</li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender27')">
+                        <span class="sender">Nejma 6</span>
+                    </div>
+                    <div id="sender27" class="content">
+                        عرض جديد و استثنائي من اتصالات المغرب !
+أنترنيت اللامحدود بجودة عالية لمدة شهر بالكامل نحو مواقع التواصل الاجتماعي : واتساب، فيسبوك، انستغرام، سنابشات وإكس مع النجمة 6 بـ50 درهم!
+سارع وفعّل العرض الآن ! رمز التعبئة *6
+                    </div>
+                </li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender28')">
+        <span class="sender">333</span>
+    </div>
+    <div id="sender28" class="content">
+        Vous avez 1 nouveau message. Le dernier déposé aujourd'hui à 14:13. Pour consulter, appelez le 333. L'appel est gratuit.
+    </div>
+</li><li class="message">
+    <div class="sender-header" onclick="toggleMessages('sender29')">
+        <span class="sender">GitLab</span>
+    </div>
+    <div id="sender29" class="content">
+        Your GitLab verification code is 1337546. This code will expire in 5 minutes.
+    </div>
+</li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender30')">
+                        <span class="sender">1xbet</span>
+                    </div>
+                    <div id="sender30" class="content">
+                        Do not pass your confirmation code 45198 on to others<br>Username: 1249277789 Password: u6nm7ea6 Do not share this information.<br><#> Verification code 14628
+DFJF9++HPgh<br><#> Verification code 169955
+DFJF9++HPgh
+                    </div>
+                </li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender31')">
+                        <span class="sender">1xBet</span>
+                    </div>
+                    <div id="sender31" class="content">
+                        تحدي 1xGames: راهن على مكافأة 300€ وخذ المال!
+https://slim.link/BXLrh59<br>البطولة اليومية شغالة على طول! اكسب جوائز حلوة ودورات في LUCKY WHEEL لما تراهن في الألعاب. https://slim.link/Ad0Q0z5
+                    </div>
+                </li>                <li class="message">
+                    <div class="sender-header" onclick="toggleMessages('sender32')">
+                        <span class="sender">SIGNAL</span>
+                    </div>
+                    <div id="sender32" class="content">
+                        SIGNAL: Your code is: 858872
+Do not share this code
+
+doDiFGKPO1r
+                    </div>
+                </li>            </ul>
+        </div>
+    </div>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            if (password === 'sms123') {
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('Incorrect password');
+            }
+        }
+        function toggleMessages(senderId) {
+            const content = document.getElementById(senderId);
+            content.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
